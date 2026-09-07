@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Tags on blog with hugo framework</title>
+		<link>https://eme-ce.github.io/tags/</link>
+		<description>Recent content in Tags on blog with hugo framework</description>
+		<generator>Hugo</generator>
+		<language>latam</language>
+		
+		
+		
+		
+			<atom:link href="https://eme-ce.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	</channel>
+</rss>
