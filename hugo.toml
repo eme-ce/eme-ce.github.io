@@ -2,3 +2,7 @@ baseURL = 'https://eme-ce.github.io/'
 locale = 'latam'
 title = 'blog with hugo framework'
 theme = 'ananke'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
