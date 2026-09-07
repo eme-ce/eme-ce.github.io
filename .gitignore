@@ -1,1 +1,6 @@
 .Ds_store
+
+public/categories/index.xml
+public/index.xml
+public/sitemap.xml
+public/tags/index.xml
