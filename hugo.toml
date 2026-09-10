@@ -6,3 +6,18 @@ theme = 'ananke'
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[[menus.main]]
+  name = 'Home'
+  pageRef = '/'
+  weight = 10
+
+[[menus.main]]
+  name = 'About'
+  pageRef = '/about'
+  weight = 20
+
+[[menus.main]]
+  name = 'Blog'
+  pageRef = '/posts'
+  weight = 30
