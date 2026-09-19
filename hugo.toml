@@ -1,23 +1,19 @@
 baseURL = 'https://eme-ce.github.io/'
 locale = 'latam'
-title = 'blog with hugo framework'
-theme = 'ananke'
-
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
+title = 'bLogging'
+theme = 'minimal-black'
 
 [[menus.main]]
   name = 'Home'
   pageRef = '/'
-  weight = 10
+  weight = 8
 
 [[menus.main]]
   name = 'About'
   pageRef = '/about'
-  weight = 20
+  weight = 16
 
 [[menus.main]]
   name = 'Blog'
   pageRef = '/posts'
-  weight = 30
+  weight = 24
