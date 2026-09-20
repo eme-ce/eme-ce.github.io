@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale | default "es" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+  {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+  <style>
+    :root { color-scheme: light dark; }
+    body { max-width: 40rem; margin: 2rem auto; padding: 0 1rem; font-family: system-ui, sans-serif; line-height: 1.6; }
+    nav { display: flex; gap: 1rem; margin-bottom: 2rem; }
+    nav a { text-decoration: none; }
+    nav a[aria-current="page"] { font-weight: bold; text-decoration: underline; }
+    footer { margin-top: 3rem; font-size: 0.85rem; opacity: 0.7; }
+    article + article { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid currentColor; }
+    time { font-size: 0.85rem; opacity: 0.7; }
+
+    code, kbd, samp, pre {
+      /* la familia repetida corrige el bug de tamaño de fuente en `em`
+         que hace que el monoespaciado se vea chico al heredar font-size
+         grandes (p. ej. dentro de un h2) */
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace, monospace;
+    }
+    :not(pre) > code, kbd {
+      font-size: 0.9em;
+      background: rgba(127, 127, 127, 0.15);
+      padding: 0.15em 0.4em;
+      border-radius: 0.3em;
+    }
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      background: rgba(127, 127, 127, 0.12);
+    }
+    pre code {
+      font-size: 0.85em;
+      background: none;
+      padding: 0;
+      border-radius: 0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    {{ range .Site.Menus.main.ByWeight }}
+      <a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}aria-current="page"{{ end }}>{{ .Name }}</a>
+    {{ end }}
+  </nav>
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer>
+    &copy; {{ now.Format "2006" }} {{ .Site.Title }}
+  </footer>
+</body>
+</html>
