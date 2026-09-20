@@ -1,7 +1,6 @@
 baseURL = 'https://eme-ce.github.io/'
 locale = 'latam'
 title = 'bLogging'
-theme = 'minimal-black'
 
 [[menus.main]]
   name = 'Home'
@@ -15,5 +14,5 @@ theme = 'minimal-black'
 
 [[menus.main]]
   name = 'Blog'
-  pageRef = '/posts'
+  pageRef = '/blog'
   weight = 24
